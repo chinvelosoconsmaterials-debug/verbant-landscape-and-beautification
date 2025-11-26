@@ -469,4 +469,256 @@ p {
 }
 
 /* Card grids */
-.card-gri
+.card-grid {
+  display: grid;
+  gap: 1.6rem;
+}
+
+.card-grid.three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.card-grid.two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+/* Cards */
+.card {
+  background: radial-gradient(circle at top, #f9f6f0 0%, #f2f6f2 55%, #edf3ee 100%);
+  border-radius: 1.4rem;
+  padding: 1.7rem 1.6rem;
+  border: 1px solid rgba(217, 200, 161, 0.55);
+  box-shadow: 0 18px 42px rgba(164, 180, 160, 0.35);
+}
+
+.card.featured {
+  border-color: rgba(166, 183, 162, 0.95);
+  box-shadow: 0 20px 48px rgba(122, 148, 122, 0.45);
+}
+
+.card-tag {
+  font-size: 0.86rem;
+  color: #7f8f7f;
+  margin-bottom: 0.75rem;
+}
+
+.card ul {
+  list-style: none;
+  margin: 0.6rem 0 1.2rem;
+}
+
+.card ul li {
+  font-size: 0.9rem;
+  margin-bottom: 0.35rem;
+}
+
+/* Boutique products */
+.boutique-grid {
+  align-items: stretch;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.product-meta {
+  font-size: 0.82rem;
+  color: #6f7f6f;
+}
+
+.product-price {
+  font-weight: 600;
+  color: var(--sage);
+}
+
+/* Gallery */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.7rem;
+}
+
+.gallery-item {
+  background: #f9f6f0;
+  border-radius: 1.4rem;
+  overflow: hidden;
+  border: 1px solid rgba(217, 200, 161, 0.7);
+  box-shadow: 0 16px 36px rgba(175, 189, 172, 0.35);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-item figcaption {
+  padding: 0.9rem 1.1rem 1.1rem;
+  font-size: 0.86rem;
+  color: #546654;
+}
+
+/* Lead form */
+.lead-form {
+  background: radial-gradient(circle at top, #f8f4ec 0%, #f1f6f0 70%);
+  padding: 1.8rem 1.7rem 1.6rem;
+  border-radius: 1.5rem;
+  border: 1px solid rgba(217, 200, 161, 0.75);
+  box-shadow: 0 22px 54px rgba(142, 160, 140, 0.4);
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-bottom: 0.9rem;
+}
+
+.form-row label {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #6d7e6d;
+}
+
+.form-row input,
+.form-row select,
+.form-row textarea {
+  background: #fbfaf7;
+  border-radius: 0.9rem;
+  border: 1px solid rgba(190, 204, 187, 0.9);
+  padding: 0.65rem 0.8rem;
+  font-size: 0.9rem;
+  color: #314031;
+  outline: none;
+}
+
+.form-row input:focus,
+.form-row select:focus,
+.form-row textarea:focus {
+  border-color: var(--sage);
+  box-shadow: 0 0 0 1px rgba(123, 166, 124, 0.4);
+}
+
+.form-row textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.form-footnote {
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  color: #7a887a;
+}
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid rgba(205, 213, 203, 0.9);
+  padding: 1.8rem 0 2.3rem;
+  background: linear-gradient(
+    to top,
+    #f5f0e8 0%,
+    #f6faf6 50%,
+    #f9f6f0 100%
+  );
+}
+
+.footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.6rem;
+  font-size: 0.82rem;
+  color: #657565;
+}
+
+.footer-brands {
+  font-weight: 500;
+}
+
+/* RESPONSIVE */
+@media (max-width: 960px) {
+  .grid-2 {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hero {
+    padding-top: 4.5rem;
+  }
+
+  .hero-copy {
+    order: 1;
+  }
+
+  .hero-media {
+    order: 0;
+  }
+
+  .hero-media img {
+    max-width: 390px;
+  }
+
+  .card-grid.three {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .main-nav {
+    gap: 0.8rem;
+    font-size: 0.78rem;
+  }
+}
+
+@media (max-width: 720px) {
+  .container {
+    width: min(100% - 2rem, 100%);
+  }
+
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+  }
+
+  .main-nav {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .hero-ctas {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .trust-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .card-grid.three,
+  .card-grid.two,
+  .gallery-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .section {
+    padding-block: 3.6rem;
+  }
+
+  .lead-form {
+    padding: 1.5rem 1.3rem 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
