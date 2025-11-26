@@ -247,3 +247,91 @@
 
         <div class="gallery-grid">
           <figure class="gallery-item">
+            <img src="assets/verdant-hero-alt2.png"
+                 alt="Garden pathway lined with flowering borders" />
+            <figcaption>Morning light along a gently curving pathway.</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="assets/verdant-hero-main.png"
+                 alt="Formal garden with structured hedges and blooms" />
+            <figcaption>A formal sanctuary softened with layered blooms.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONSULTATION FORM -->
+    <section class="section dark" id="consult">
+      <div class="container grid-2 section-grid">
+        <div class="section-copy">
+          <h2>Begin Your Garden Conversation.</h2>
+          <p>
+            Share a little about your space and how you’d love to feel in it.
+            We’ll respond with a gentle next step: a call, visit, or digital walkthrough.
+          </p>
+          <ul class="checklist">
+            <li>No obligation; simply explore what’s possible.</li>
+            <li>We review sun, shade, and existing plantings.</li>
+            <li>Options for phased installations and budgets.</li>
+          </ul>
+        </div>
+
+        <div class="section-media">
+          <form class="lead-form">
+            <div class="form-row">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" placeholder="Elena Rivera" required />
+            </div>
+            <div class="form-row">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required />
+            </div>
+            <div class="form-row">
+              <label for="phone">Mobile Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000" required />
+            </div>
+            <div class="form-row">
+              <label for="location">Garden Location</label>
+              <input type="text" id="location" name="location" placeholder="City / Suburb" />
+            </div>
+            <div class="form-row">
+              <label for="garden-type">Type of Space</label>
+              <select id="garden-type" name="garden-type">
+                <option>Front garden</option>
+                <option>Back garden</option>
+                <option>Court / courtyard</option>
+                <option>Terrace / balcony</option>
+                <option>Entire property</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <label for="vision">Tell Us About Your Vision</label>
+              <textarea id="vision" name="vision" rows="4"
+                placeholder="Quiet reading nook, family gatherings, evening glow, edible herbs…"></textarea>
+            </div>
+            <button type="submit" class="btn primary full-width">Submit Consultation Request</button>
+            <p class="form-footnote">
+              We’ll reply within 1–2 business days with gentle next steps for your garden.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Verdant Elegance. All rights reserved.</p>
+      <p class="footer-brands">
+        SVP Funnels – Streamlined Solutions &middot; Tiny Team Digital Studio
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // Simple year updater
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
